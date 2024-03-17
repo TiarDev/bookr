@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Carbon\Carbon;
+Use DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -15,9 +16,6 @@ class BooksTableSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call('UsersTableSeeder');
-        $this->call(BooksTableSeeder::class);
-
         DB::table('books')->insert([
             'title' => 'War of the Worlds',
             'description' => 'A science fiction masterpiece about Martians invading London',
